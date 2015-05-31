@@ -11,4 +11,12 @@ class PolekwadratuSpec extends ObjectBehavior
     {
         $this->shouldHaveType('dpyc\Tools\Polekwadratu');
     }
+    function it_should_have_setter_and_gettter()
+    {
+        $this->setA(4)->getA()->shouldReturn(4);
+    }
+	function it_should_calculate_polekwadratu()
+	{
+	    $this->setA(4)->polekwadratu()->shouldReturn(16);
+	}
 }
